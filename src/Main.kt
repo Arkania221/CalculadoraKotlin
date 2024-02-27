@@ -22,34 +22,53 @@ Realizacion del ejercicio:
     bucle
 */
 
-fun Suma() {
 
 
 
-}
+fun Suma(val1: int, val2: int) {
 
-fun Resta() {
-
-
-
-}
-
-fun Multiplicacion() {
-
+val resultado = val1 + val2
 
 
 }
 
-fun Division() {
 
+
+
+fun Resta(val1: int, val2: int) {
+
+val resultado = val1 - val2
 
 
 }
+
+
+
+fun Multiplicacion(val1: int, val2: int) {
+
+    val resultado = val1 * val2
+
+
+}
+
+
+fun Division(val1: int, val2: int) {
+
+    val resultado = val1 / val2
+
+
+}
+
+
+
 
 
 
 fun Main() {
-
+val val1 = readLine()
+val val2 = readLine()
 
 
 }
+
+Main()
