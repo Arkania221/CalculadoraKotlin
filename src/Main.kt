@@ -88,8 +88,14 @@ fun main() {
                 resultado = val1?.let { v1 -> val2?.let { v2 -> Multiplicacion(v1, v2) } }
                 println("Resultado: $resultado")
             } else if (operacion == 4) {
-                resultado = val1?.let { v1 -> val2?.let { v2 -> Division(v1, v2) } }
-                println("Resultado: $resultado")
+                if (val2 != 0) {
+                    resultado = val1?.let { v1 -> val2?.let { v2 -> Division(v1, v2) } }
+                    if (resultado != null) {
+                        println("Resultado: $resultado")
+                    }
+                } else {
+                    println("No se puede dividir por cero.")
+                }
             } else {
                 println("Seleccione una operacion disponible")
             }
