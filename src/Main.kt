@@ -20,6 +20,21 @@ Realizacion del ejercicio:
     -Para poder realizar varias operaciones dentro del programa
     sin tener que iniciarlo cada vez, se insertara el main en un
     bucle
+
+Explicaciones por si algun dia lo preciso:
+
+la declaracion de una variable comienza con val (value)
+
+de una funcion con fun (funcion)
+
+el ?. se usa para evitar un nullpointerexepcion
+
+"let" es una funcion que permite la ejecucion del siguiente bloque
+
+de codigo en caso de que no sea null
+
+?.toIntOrNull() pasa una str a un int, en caso de que no se pueda lo pasara a un
+null en vez de dar error
 */
 
 
