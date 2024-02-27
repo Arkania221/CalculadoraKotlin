@@ -64,38 +64,40 @@ fun Division(val1: Int, val2: Int): Int {
 
 
 
-fun Main() {
+fun main() {
+    while (true) {
+        println("Ingresa los valores")
 
-    println("Ingresa los valores")
+        val val1 = readLine()?.toIntOrNull()
+        val val2 = readLine()?.toIntOrNull()
 
-    val val1 = readLine()?.toIntOrNull()
-    val val2 = readLine()?.toIntOrNull()
+        println("Selecciona tipo de operacion: 1.Suma ; 2.Resta ; 3.Multiplicacion ; 4.Division")
 
-    println("Selecciona tipo de operacion: 1.Suma ; 2.Resta ; 3.Multiplicacion ; 4.Division")
+        val operacion = readLine()?.toIntOrNull()
 
-    val operacion = readLine()?.toIntOrNull()
+        if (operacion != null) {
 
-    if (operacion != null) {
-
-        val resultado: Int?
-        if (operacion == 1) {
-            resultado = val1?.let { v1 -> val2?.let { v2 -> Suma(v1, v2) } }
-            if (resultado != null) {
+            val resultado: Int?
+            if (operacion == 1) {
+                resultado = val1?.let { v1 -> val2?.let { v2 -> Suma(v1, v2) } }
                 println("Resultado: $resultado")
+            } else if (operacion == 2) {
+                resultado = val1?.let { v1 -> val2?.let { v2 -> Resta(v1, v2) } }
+                println("Resultado: $resultado")
+            } else if (operacion == 3) {
+                resultado = val1?.let { v1 -> val2?.let { v2 -> Multiplicacion(v1, v2) } }
+                println("Resultado: $resultado")
+            } else if (operacion == 4) {
+                resultado = val1?.let { v1 -> val2?.let { v2 -> Division(v1, v2) } }
+                println("Resultado: $resultado")
+            } else {
+                println("Seleccione una operacion disponible")
             }
-        } else if (operacion == 2) {
-            resultado = val1?.let { v1 -> val2?.let { v2 -> Resta(v1, v2) } }
-        } else if (operacion == 3) {
-            resultado = val1?.let { v1 -> val2?.let { v2 -> Multiplicacion(v1, v2) } }
-        } else if (operacion == 4) {
-            resultado = val1?.let { v1 -> val2?.let { v2 -> Division(v1, v2) } }
         } else {
-            println("Seleccione una operacion disponible")
+            println("Por favor seleccione una opción")
         }
-    } else {
-        println("Por favor seleccione una opción")
     }
 }
 
-Main()
+
 
