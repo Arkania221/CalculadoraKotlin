@@ -66,8 +66,7 @@ fun Division(val1: Int, val2: Int): Int {
 
 fun Main() {
 
-
-    println("Selecciona los numeros a operar:")
+    println("Ingresa los valores")
 
     val val1 = readLine()?.toIntOrNull()
     val val2 = readLine()?.toIntOrNull()
@@ -77,23 +76,26 @@ fun Main() {
     val operacion = readLine()?.toIntOrNull()
 
     if (operacion != null) {
+
+        val resultado: Int?
         if (operacion == 1) {
-            val resultado = Suma(val1, val2)
-            println("Resultado: " + resultado)
+            resultado = val1?.let { v1 -> val2?.let { v2 -> Suma(v1, v2) } }
+            if (resultado != null) {
+                println("Resultado: $resultado")
+            }
         } else if (operacion == 2) {
-            val resultado = Resta(val1, val2)
+            resultado = val1?.let { v1 -> val2?.let { v2 -> Resta(v1, v2) } }
         } else if (operacion == 3) {
-            val resultado = Multiplicacion(val1, val2)
+            resultado = val1?.let { v1 -> val2?.let { v2 -> Multiplicacion(v1, v2) } }
         } else if (operacion == 4) {
-            val resultado = Division(val1, val2)
+            resultado = val1?.let { v1 -> val2?.let { v2 -> Division(v1, v2) } }
         } else {
             println("Seleccione una operacion disponible")
         }
     } else {
-        println("Porfavor seleccione una opcion")
+        println("Por favor seleccione una opción")
     }
-
 }
 
-
+Main()
 
