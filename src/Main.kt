@@ -25,38 +25,38 @@ Realizacion del ejercicio:
 
 
 
-fun Suma(val1: int, val2: int) {
+fun Suma(val1: Int, val2: Int): Int {
 
-val resultado = val1 + val2
+    val resultado = val1 + val2
 
-
+    return resultado
 }
 
 
 
 
-fun Resta(val1: int, val2: int) {
+fun Resta(val1: Int, val2: Int): Int {
 
-val resultado = val1 - val2
+    val resultado = val1 - val2
 
-
+    return resultado
 }
 
 
 
-fun Multiplicacion(val1: int, val2: int) {
+fun Multiplicacion(val1: Int, val2: Int): Int {
 
     val resultado = val1 * val2
 
-
+    return resultado
 }
 
 
-fun Division(val1: int, val2: int) {
+fun Division(val1: Int, val2: Int): Int {
 
     val resultado = val1 / val2
 
-
+    return resultado
 }
 
 
@@ -65,8 +65,12 @@ fun Division(val1: int, val2: int) {
 
 
 fun Main() {
-val val1 = readLine()
-val val2 = readLine()
+
+    println("Selecciona tipo de operacion: 1.Suma ; 2.Resta ; 3.Multiplicacion ; 4.Division")
+
+
+    val val1 = readLine()
+    val val2 = readLine()
 
 
 }
